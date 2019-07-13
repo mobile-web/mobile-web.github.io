@@ -1,0 +1,687 @@
+<!--
+# MWEB 2016
+# Created by Vincent Llauderes
+# Date: September 8, 2016
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mobile Web - Home page</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="getmweb" content="mweb, getmweb.com, getmweb" />
+    <meta
+      name="description"
+      content="Mobile Web is a mobile learning android application"
+    />
+    <meta name="author" content="Vincent Llauderes" />
+
+    <link href="images/icon.png" rel="shorcut icon" type="image/x-icon" />
+
+    <link href="css/bootstrap.css" rel="stylesheet" />
+
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+    <link href="css/animate.css" rel="stylesheet" />
+
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <script type="text/javascript">
+      var im_i = 0;
+      var im_array = [
+        'Your best source in learning a Web Programming',
+        'Download the app now',
+      ];
+      var im_elem;
+      function imNext() {
+        im_i++;
+        im_elem.style.opacity = 0;
+        if (im_i > im_array.length - 1) {
+          im_i = 0;
+        }
+        setTimeout('imSlide()', 1000);
+      }
+      function imSlide() {
+        im_elem.innerHTML = im_array[im_i];
+        im_elem.style.opacity = 1;
+        setTimeout('imNext()', 3000);
+      }
+    </script>
+
+    <style>
+      #loading {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background: url('images/preloader.gif') center no-repeat #fff;
+        background-size: 10%;
+      }
+
+      .team_photo {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        transition: all 0.5s ease-in-out;
+      }
+
+      .team_photo:hover {
+        -webkit-filter: grayscale(0%);
+        filter: grayscale(0%);
+        transition: all 0.5s ease-in-out;
+      }
+    </style>
+  </head>
+
+  <div id="loading"></div>
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <!-- Navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header page-scroll">
+          <button
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navHeaderCollapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" id="navbrand">
+            <img src="images/mweb_logo2.png" alt="mweb_logo" height="50" />
+          </a>
+        </div>
+        <div class="collapse navbar-collapse navHeaderCollapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="hidden">
+              <a class="page-scroll" href="#page-top"></a>
+            </li>
+            <li class="list">
+              <a class="page-scroll" href="#p">Home</a>
+            </li>
+            <li class="list">
+              <a class="page-scroll" href="#features">Features</a>
+            </li>
+            <li class="list">
+              <a class="page-scroll" href="#mobile_screen_shot">Compiler</a>
+            </li>
+            <li class="list">
+              <a class="page-scroll" href="#team">About us</a>
+            </li>
+            <li class="list">
+              <a class="page-scroll" href="#content_contact">Contact us</a>
+            </li>
+            <li class="list">
+              <a
+                class="page-scroll"
+                href="https://play.google.com/store/apps/details?id=com.newmweb.llauderesv.mobileweb"
+                >Download app</a
+              >
+            </li>
+            <li class="list">
+              <a class="page-scroll" href="http://www.newmweb.com/mweb0"
+                >Login</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="section_one">
+      <p id="p" style="display: none;"></p>
+      <div id="content">
+        <div class="left-container">
+          <h1 id="type">Welcome to Mobile Web</h1>
+          <h3>Your best tool learning Web Programming</h3>
+          <a id="download_button" class="btn" type="button" name="button"
+            >Download app</a
+          >
+        </div>
+        <div class="right-container" id="image">
+          <img
+            id="carousel"
+            src="images/24.png"
+            alt="responsive"
+            class="img-responsive"
+          />
+        </div>
+      </div>
+
+      <div class="row features_wrapper">
+        <div class="col-md-12">
+          <div id="features" style="margin-bottom: 50px;">
+            <h1 id="head_features">Features</h1>
+            <img src="images/10.png" alt="title_line" class="tag_line" />
+          </div>
+          <div class="row" id="features_row">
+            <div class="col-md-6">
+              <h3 class="h3_style">Create your own lessons</h3>
+              <p class="features_content">
+                MWEB offers lesson manipulation and maintenance, the admin will
+                be responsible for doing this, they can easily manipulate
+                through the Administrator's page. They can also format the
+                lessons through HTML format. Through this app, students can also
+                view the lesson via offline.<br /><br />
+              </p>
+            </div>
+            <div class="col-md-6">
+              <img
+                src="images/Capture.PNG"
+                alt="image_11"
+                class="img-responsive img-thumbnail"
+              />
+            </div>
+          </div>
+          <hr />
+          <div class="row" id="features_row_one">
+            <div class="col-md-6 slideup">
+              <img
+                src="images/Capture2.PNG"
+                alt="image_12"
+                class="img-responsive img-thumbnail"
+              />
+            </div>
+            <div class="col-md-6 slideup">
+              <h3 class="h3_style">Upload your own videos</h3>
+              <p class="features_content">
+                MWEB also provides videos which contain lessons. The
+                administrator will be responsible for doing this. In uploading a
+                video there's various file format which is ".mp4" and the size
+                of the video is not exceeded in 10mb.
+              </p>
+            </div>
+          </div>
+          <hr />
+          <div class="row" id="features_row_two">
+            <div class="col-md-6 slideup">
+              <h3 class="h3_style">Collaborate to other people</h3>
+              <p class="features_content">
+                MWEB offers a forum that they can easily communicate to other
+                people in the campus. They can easily post a topic in their
+                mobile app and also like the post if they want it and they can
+                also comment and the students will able to discuss about a
+                specific lesson.
+              </p>
+            </div>
+            <div class="col-md-6 slideup">
+              <img
+                src="images/Capture3.PNG"
+                alt="image_13"
+                class="img-responsive img-thumbnail"
+              />
+            </div>
+          </div>
+          <hr />
+          <div class="row" id="features_row_three">
+            <div class="col-md-6 slideup">
+              <img
+                src="images/Capture4.PNG"
+                alt="image_14"
+                class="img-responsive img-thumbnail"
+              />
+            </div>
+            <div class="col-md-6 slideup">
+              <h3 class="h3_style">Group your section</h3>
+              <p class="features_content">
+                In MWEB, Teachers can make a group in order to filter their
+                students by section. They can easily organize their students by
+                grouping and easy to remember the teacher and easily deliver all
+                the activities to their respective students and controlling the
+                number of students in the teacher module
+              </p>
+            </div>
+          </div>
+          <hr />
+          <div class="row" id="features_row_four">
+            <div class="col-md-6 slideup">
+              <h3 class="h3_style">Student management</h3>
+              <p class="features_content">
+                MWEB offers a student management, which gives an authority to
+                accessed the application. Administrators can easily manipulate
+                the students using the back end.
+              </p>
+            </div>
+            <div class="col-md-6 slideup">
+              <img
+                src="images/Capture5.PNG"
+                alt="image_15"
+                class="img-responsive img-thumbnail"
+              />
+            </div>
+          </div>
+          <hr />
+          <div class="row" id="features_row_five">
+            <div class="col-md-6 slideup">
+              <img
+                src="images/Capture6.PNG"
+                alt="image_16"
+                class="img-responsive img-thumbnail"
+              />
+            </div>
+            <div class="col-md-6 slideup">
+              <h3 class="h3_style">Realtime Announcements</h3>
+              <p class="features_content">
+                MWEB offers posting announcement in the backend the teacher will
+                reponsible for doing this activity. The students will realtime
+                notify if the teacher will post announcement and that alerts you
+                if there are updates occurred on your account.
+              </p>
+            </div>
+          </div>
+          <hr />
+          <div class="row" id="features_row_six">
+            <div class="col-md-6 slideup">
+              <h3 class="h3_style">Downloadable contents</h3>
+              <p class="features_content">
+                MWEB offers a downloadable contents. The teacher will capable
+                for uploading a pdf file in their classroom. The students will
+                able to see all the uploaded pdf in their classroom and they
+                easily download it.
+              </p>
+            </div>
+            <div class="col-md-6 slideup">
+              <img
+                src="images/Capture7.PNG"
+                alt="image_17"
+                class="img-responsive img-thumbnail"
+              />
+            </div>
+          </div>
+          <hr />
+          <div class="row" id="features_row_seven">
+            <div class="col-md-6 slideup">
+              <img
+                src="images/Capture8.PNG"
+                alt="image_18"
+                class="img-responsive img-thumbnail"
+              />
+            </div>
+            <div class="col-md-6 slideup">
+              <h3 class="h3_style">Create your own quizzes</h3>
+              <p class="features_content">
+                MWEB offers a manipulating a quiz in the back end and the
+                teacher will be responsible for doing this. There are 3 kinds of
+                quiz that MWEB offers first the multiple choice, second the true
+                or false and the third is the fill in the blanks. The students
+                will able to take the quiz via offline and online.
+              </p>
+            </div>
+          </div>
+          <hr />
+          <div class="row" id="features_row_eight">
+            <div class="col-md-6 slideup">
+              <h3 class="h3_style">Drills</h3>
+              <p class="features_content">
+                MWEB offers a drill module that will able to challenge their
+                students. The purpose of this module is for the students to be
+                able to send their work that was made in the proposed system to
+                be for the teacher to check their work.
+              </p>
+            </div>
+            <div class="col-md-6 slideup">
+              <img
+                src="images/Capture9.PNG"
+                alt="image_19"
+                class="img-responsive img-thumbnail"
+              />
+            </div>
+          </div>
+          <hr />
+          <div class="row" id="features_row_nine">
+            <div class="col-md-6 slideup">
+              <img
+                src="images/Capture10.PNG"
+                alt="image_20"
+                class="img-responsive img-thumbnail"
+              />
+            </div>
+            <div class="col-md-6 slideup">
+              <h3 class="h3_style">Rankings</h3>
+              <p class="features_content">
+                MWEB offers a ranking features that will able to rank who will
+                be get the highest score in quiz and in the drills
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+
+      <!--  Divider Mobile web modules -->
+      <div class="row" id="mobile_screen_shot">
+        <div class="col-md-12">
+          <h1 id="head_insight">Mobile Web Compiler</h1>
+          <div class="row">
+            <div class="col-md-6" id="main_container_compiler">
+              <h2>MWEB Compiler</h2>
+              <h3>
+                One of the main features of the Mweb is the compiler. That will
+                able to simulate a php codes via mobile app, they can use this
+                through offline and online. They can also change the color theme
+                of the text editor and it offers a syntax highlighting.<br /><br />
+
+                This aims to test the psychomotor skills of the students by
+                providing hands-on exercises through the use of a compiler. In
+                the compiler module students can test their selves from what
+                they learn to develop their skills in programming.
+              </h3>
+            </div>
+            <div class="col-md-2" id="compiler_one">
+              <img src="images/compiler2.png" alt="image_21" height="600" />
+            </div>
+            <div class="col-md-2" id="compiler_two">
+              <img src="images/compiler1.png" alt="image_21" height="600" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  Divider Team -->
+      <div class="row" id="team">
+        <h1 id="head_team">Meet with our awesome team</h1>
+        <div class="col-md-12 slideup">
+          <img
+            src="images/10.png"
+            alt="title_line"
+            class="tag_line"
+          /><br /><br /><br />
+          <div class="row">
+            <div class="col-md-12" style="text-align:center;">
+              <img
+                src="images/wilson.png"
+                alt="wilson"
+                class="img_circle team_photo"
+              />
+              <h3>Wilson Mendoza</h3>
+              <h4>Project adviser</h4>
+              <p class="team_paragraph">
+                "Don't focus on your goal, Focus on your behaviour"
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-5">
+              <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-3">
+                  <img
+                    src="images/vincent.png"
+                    alt="vincent"
+                    class="img_circle team_photo"
+                  />
+                </div>
+                <div class="col-md-7 team_content">
+                  <h3>Vincent Llauderes</h3>
+                  <h4>Senior Programmer</h4>
+                  <p class="team_paragraph">
+                    "The only way to do a great work is to love what you do"
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-3">
+                  <img
+                    src="images/lance.png"
+                    alt="lance"
+                    class="img_circle team_photo"
+                  />
+                </div>
+                <div class="col-md-7 team_content">
+                  <h3>Lance Dela Cruz</h3>
+                  <h4>Junior Programmer</h4>
+                  <p class="team_paragraph">
+                    "Some people dream of success while others wake up and work
+                    hard of it"
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row" id="documentation">
+            <div class="col-md-1"></div>
+            <div class="col-md-5">
+              <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-3">
+                  <img
+                    src="images/angelo.png"
+                    alt="angelo"
+                    class="img_circle team_photo"
+                  />
+                </div>
+                <div class="col-md-7 team_content">
+                  <h3>Richard Angelo Alipio</h3>
+                  <h4>Documentation</h4>
+                  <p class="team_paragraph">
+                    "Always deliver more than expected"
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-3">
+                  <img
+                    src="images/tiffany.png"
+                    alt="tiffany"
+                    class="img_circle team_photo"
+                  />
+                </div>
+                <div class="col-md-7 team_content">
+                  <h3>Tiffany Irish Ecoy</h3>
+                  <h4>Documentation, Designer</h4>
+                  <p class="team_paragraph">
+                    "Patience is the key element of success"
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="user">
+        <div class="col-md-12" id="children">
+          <div id="user_content">
+            <h1 id="head_education">Mweb for education</h1>
+            <h3>
+              Transform the way you learn in your classroom. <br />
+              Mweb is the best way to learn the Web programming and you can
+              <br />
+              collaborate to other people.
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class="row" id="user_two">
+        <div class="col-md-12" id="children">
+          <div id="user_content">
+            <h1 id="head_education">Get the app on play store</h1>
+            <h3>
+              Mweb is free in google play store you can download <br />it free
+              with no any payment included.
+            </h3>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="row" style="background-color: #333; color: #FFF;"></div>
+      <div class="row" id="content_contact">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+              <h1>Contact us</h1>
+            </div>
+          </div>
+          <br />
+          <form>
+            <div class="row">
+              <div class="col-md-3"></div>
+              <div class="col-md-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="name"
+                  placeholder="Name:"
+                  required
+                />
+              </div>
+              <div class="col-md-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="number"
+                  placeholder="Mobile number:"
+                  required
+                />
+              </div>
+            </div>
+            <br />
+            <div class="row">
+              <div class="col-md-3"></div>
+              <div class="col-md-6">
+                <textarea
+                  name="message"
+                  class="form-control"
+                  rows="8"
+                  cols="40"
+                  placeholder="Message:"
+                  required
+                ></textarea
+                ><br />
+                <button
+                  type="submit"
+                  name="button"
+                  class="btn btn-primary"
+                  id="submit_button"
+                  style="float: right; width: 150px;"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+            <br />
+          </form>
+        </div>
+      </div>
+      <div class="row" id="footer">
+        <div class="col-md-6" id="footer_children">
+          <ul id="footer_link">
+            <li><h4>Follow Mobile Web on</h4></li>
+            <li>
+              <a
+                href="https://www.facebook.com/MWEB.ADEL/?ref=aymt_homepage_panel"
+                ><img src="images/facebook.png" alt="facebook"
+              /></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/twitter.png" alt="twitter"/></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/instagram.png" alt="instagram"/></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images/googleplus.png" alt="googleplus"
+              /></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/youtube.png" alt="youtube"/></a>
+            </li>
+          </ul>
+          <br />
+
+          <ul id="footer_link_two">
+            <li><a class="page-scroll" href="#p">Home</a></li>
+            <li><a class="page-scroll" href="#features">Features</a></li>
+            <li>
+              <a class="page-scroll" href="#mobile_screen_shot">Compiler</a>
+            </li>
+            <li><a class="page-scroll" href="#team">About us</a></li>
+            <li>
+              <a class="page-scroll" href="#content_contact">Contact us</a>
+            </li>
+            <li>
+              <a
+                class="page-scroll"
+                href="https://play.google.com/store/apps/details?id=com.newmweb.llauderesv.mobileweb"
+                >Download app</a
+              >
+            </li>
+            <li>
+              <a class="page-scroll" href="https://www.newmweb.com">Login</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6" style="color: #FFF;">
+          <ul id="footer_link_three">
+            <li>
+              <h5>
+                © Copyright 2016 - <span id="year"></span> Mobile Web, All
+                Rights Reserved.
+              </h5>
+            </li>
+            <li>
+              <h5>
+                <i class="fa fa-phone" aria-hidden="true"></i
+                ><span style="margin-left: 10px;">+0936-614-5683</span>
+              </h5>
+            </li>
+            <li>
+              <h5>
+                <i class="fa fa-envelope-o" aria-hidden="true"></i
+                ><span style="margin-left: 10px;">mobileweb@gmail.com</span>
+              </h5>
+            </li>
+          </ul>
+          <br />
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript dependencies -->
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/animation.js"></script>
+    <script type="text/javascript" src="js/animation2.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#loading').fadeOut('slow');
+      });
+      (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        (i[r] =
+          i[r] ||
+          function() {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        'script',
+        'https://www.google-analytics.com/analytics.js',
+        'ga'
+      );
+
+      ga('create', 'UA-83921085-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
